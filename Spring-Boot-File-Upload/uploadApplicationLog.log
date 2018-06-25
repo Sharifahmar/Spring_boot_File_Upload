@@ -230,3 +230,50 @@ Consider defining a bean of type 'com.demo.service.FileUploadServiceImpl' in you
 2018-06-25 21:51:11.925  INFO 6948 --- [http-nio-8080-exec-3] c.demo.controller.RestUploadController   : contentSize : 180224
 2018-06-25 22:02:01.096  INFO 6948 --- [http-nio-8080-exec-2] c.demo.controller.RestUploadController   : Multiple file upload!
 2018-06-25 22:02:30.954  INFO 6948 --- [http-nio-8080-exec-4] c.demo.controller.RestUploadController   : Multiple file upload!
+2018-06-25 22:20:18.921  INFO 7524 --- [main] com.demo.SpringBootWebApplication        : Starting SpringBootWebApplication on Sharif with PID 7524 (C:\Users\Ahmar\git\Spring_boot_File_Upload\Spring-Boot-File-Upload\target\classes started by Ahmar in C:\Users\Ahmar\git\Spring_boot_File_Upload\Spring-Boot-File-Upload)
+2018-06-25 22:20:18.930  INFO 7524 --- [main] com.demo.SpringBootWebApplication        : No active profile set, falling back to default profiles: default
+2018-06-25 22:20:19.088  INFO 7524 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fe4948: startup date [Mon Jun 25 22:20:19 IST 2018]; root of context hierarchy
+2018-06-25 22:20:22.842  INFO 7524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da46bdd0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 22:20:24.784  INFO 7524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-06-25 22:20:24.821  INFO 7524 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-06-25 22:20:24.824  INFO 7524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-06-25 22:20:25.043  INFO 7524 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-25 22:20:25.045  INFO 7524 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5957 ms
+2018-06-25 22:20:25.515  INFO 7524 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-25 22:20:25.528  INFO 7524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-25 22:20:25.529  INFO 7524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-25 22:20:25.531  INFO 7524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-25 22:20:25.531  INFO 7524 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-25 22:20:26.578  INFO 7524 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [upload-ddl.sql]
+2018-06-25 22:20:27.049  INFO 7524 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [upload-ddl.sql] in 469 ms.
+2018-06-25 22:20:27.260  INFO 7524 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-25 22:20:27.308  INFO 7524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-25 22:20:27.582  INFO 7524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-06-25 22:20:27.587  INFO 7524 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-25 22:20:27.593  INFO 7524 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-25 22:20:27.740  INFO 7524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-25 22:20:28.119  INFO 7524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-25 22:20:29.551  INFO 7524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-25 22:20:30.941  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fe4948: startup date [Mon Jun 25 22:20:19 IST 2018]; root of context hierarchy
+2018-06-25 22:20:31.155  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fileupload],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.demo.controller.RestUploadController.uploadFile(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2018-06-25 22:20:31.158  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/multiplefiles],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.demo.controller.RestUploadController.uploadFileMulti(org.springframework.web.multipart.MultipartFile[])
+2018-06-25 22:20:31.160  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getFileUploadMetaData],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.demo.controller.RestUploadController.getAllDetails()
+2018-06-25 22:20:31.169  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-25 22:20:31.170  INFO 7524 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-25 22:20:31.253  INFO 7524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 22:20:31.254  INFO 7524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 22:20:31.313  INFO 7524 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restGlobalExceptionHandler
+2018-06-25 22:20:31.371  INFO 7524 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 22:20:31.985  INFO 7524 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-25 22:20:32.395  INFO 7524 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-06-25 22:20:32.407  INFO 7524 --- [main] com.demo.SpringBootWebApplication        : Started SpringBootWebApplication in 14.827 seconds (JVM running for 29.575)
+2018-06-25 22:21:50.274  INFO 7524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-25 22:21:50.276  INFO 7524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-25 22:21:50.328  INFO 7524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+2018-06-25 22:21:50.495  INFO 7524 --- [http-nio-8080-exec-1] c.demo.controller.RestUploadController   : Single file upload!
+2018-06-25 22:21:50.496  INFO 7524 --- [http-nio-8080-exec-1] c.demo.controller.RestUploadController   : fileName : mypicedited.JPG
+2018-06-25 22:21:50.497  INFO 7524 --- [http-nio-8080-exec-1] c.demo.controller.RestUploadController   : contentType : image/jpeg
+2018-06-25 22:21:50.497  INFO 7524 --- [http-nio-8080-exec-1] c.demo.controller.RestUploadController   : contentSize : 133335
+2018-06-25 22:21:56.068  INFO 7524 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

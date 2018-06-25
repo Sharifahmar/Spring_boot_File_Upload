@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,15 +13,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.demo.Entity.FileUploadMetaData;
 import com.demo.dao.FileUploadRepository;
+import com.demo.entity.FileUploadMetaData;
 import com.demo.model.FileUploadMetaDataModel;
 
 @Service
 public class FileUploadServiceImpl implements IFileUploadService {
 
 	/** Save the uploaded file to this folder */
-	private static String UPLOADED_FOLDER = "C:/Users/Ahmar/Desktop/images/";
+	private static String UPLOADED_FOLDER = "C:" + File.separator + "Users"
+			+ File.separator + "Ahmar" + File.separator + "Desktop"
+			+ File.separator + "images" + File.separator;
 
 	/**
 	 * Thdis object is required to store file meta data into in memory database
@@ -39,7 +42,7 @@ public class FileUploadServiceImpl implements IFileUploadService {
 			byte[] bytes = file.getBytes();
 			Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
 			Files.write(path, bytes);
-			saveMetaData(file,path);
+			saveMetaData(file, path);
 
 		}
 
@@ -48,13 +51,13 @@ public class FileUploadServiceImpl implements IFileUploadService {
 	/**
 	 * Method is use to save metadata of multipart
 	 */
-	public void saveMetaData(MultipartFile file,Path path) throws IOException {
+	public void saveMetaData(MultipartFile file, Path path) throws IOException {
 		FileUploadMetaData metaData = new FileUploadMetaData();
 		metaData.setName(file.getOriginalFilename());
 		metaData.setContentType(file.getContentType());
 		metaData.setContentSize(file.getSize());
 		metaData.setPath(path.toString());
-		
+
 		fileUploadMetaData.save(metaData);
 	}
 
